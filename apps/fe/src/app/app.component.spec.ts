@@ -15,14 +15,12 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome weather-forecast'
-    );
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome fe');
   });
 
-  it(`should have as title 'weather-forecast'`, () => {
+  it(`should have as title 'fe'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('weather-forecast');
+    expect(app.title).toEqual('fe');
   });
 });

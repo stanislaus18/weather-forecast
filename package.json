@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "start" : "nx run fe:serve:development",
+    "start:prod": "nx run fe:serve:production"
   },
   "private": true,
   "dependencies": {
@@ -52,7 +51,6 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-preset-angular": "~13.1.0",
     "nx": "16.2.1",
-    "nx-cloud": "latest",
     "prettier": "^2.6.2",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
