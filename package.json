@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start" : "nx run fe:serve:development",
+    "start": "nx run fe:serve:development",
     "start:prod": "nx run fe:serve:production"
   },
   "private": true,
@@ -16,7 +16,10 @@
     "@angular/platform-browser": "~16.0.0",
     "@angular/platform-browser-dynamic": "~16.0.0",
     "@angular/router": "~16.0.0",
-    "@nx/angular": "16.2.1",
+    "@ngxs-labs/dispatch-decorator": "^5.0.0",
+    "@ngxs/store": "^3.8.1",
+    "@nx/angular": "^16.2.1",
+    "bootstrap": "^5.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -28,9 +31,11 @@
     "@angular-eslint/eslint-plugin": "~16.0.0",
     "@angular-eslint/eslint-plugin-template": "~16.0.0",
     "@angular-eslint/template-parser": "~16.0.0",
-    "@angular/cli": "~16.0.0",
+    "@angular/cli": "^16.0.2",
     "@angular/compiler-cli": "~16.0.0",
     "@angular/language-service": "~16.0.0",
+    "@ngxs/devtools-plugin": "^3.8.1",
+    "@ngxs/logger-plugin": "^3.8.1",
     "@nx/cypress": "16.2.1",
     "@nx/eslint-plugin": "16.2.1",
     "@nx/jest": "16.2.1",
