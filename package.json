@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run fe:serve:development",
-    "start:prod": "nx run fe:serve:production"
+    "start:prod": "nx run fe:serve:production",
+    "start:weather": "nx run weather-ui:serve:development",
+    "start:weather:prod": "nx run weather-ui:serve:production"
   },
   "private": true,
   "dependencies": {

@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "weather",
+            "prefix": "weather-forecast",
             "style": "kebab-case"
           }
         ]

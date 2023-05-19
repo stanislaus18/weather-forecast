@@ -1,1 +1,1 @@
-export * from './lib/apis.module';
+export * from './lib/weather-api.service';
