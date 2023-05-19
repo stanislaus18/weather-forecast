@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ApiService } from 'libs/store/src/lib/services/api.service';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'weather-forecast-nx-welcome',
@@ -421,7 +420,7 @@ import { ApiService } from 'libs/store/src/lib/services/api.service';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome fe 👋
+            Welcome weather-ui 👋
           </h1>
         </div>
         <!--  HERO  -->
@@ -851,10 +850,4 @@ nx affected:e2e</pre>
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent implements OnInit {
-  constructor(private apiService: ApiService) { }
-
-  ngOnInit() {
-    this.apiService.getWeather().subscribe(d => console.log(d));
-  }
-}
+export class NxWelcomeComponent {}

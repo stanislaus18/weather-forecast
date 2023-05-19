@@ -1,24 +1,26 @@
 {
-  "name": "fe",
+  "name": "weather-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "weather-forecast",
-  "sourceRoot": "apps/fe/src",
+  "sourceRoot": "apps/weather-ui/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/fe",
-        "index": "apps/fe/src/index.html",
-        "main": "apps/fe/src/main.ts",
+        "outputPath": "dist/apps/weather-ui",
+        "index": "apps/weather-ui/src/index.html",
+        "main": "apps/weather-ui/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/fe/tsconfig.app.json",
-        "assets": ["apps/fe/src/favicon.ico", "apps/fe/src/assets"],
-        "styles": ["node_modules/bootstrap/scss/bootstrap.scss", "apps/fe/src/styles.scss"],
-        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-        ]
+        "tsConfig": "apps/weather-ui/tsconfig.app.json",
+        "assets": [
+          "apps/weather-ui/src/favicon.ico",
+          "apps/weather-ui/src/assets"
+        ],
+        "styles": ["apps/weather-ui/src/styles.scss"],
+        "scripts": []
       },
       "configurations": {
         "production": {
@@ -51,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "fe:build:production"
+          "browserTarget": "weather-ui:build:production"
         },
         "development": {
-          "browserTarget": "fe:build:development"
+          "browserTarget": "weather-ui:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -62,21 +64,24 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "fe:build"
+        "browserTarget": "weather-ui:build"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/fe/**/*.ts", "apps/fe/**/*.html"]
+        "lintFilePatterns": [
+          "apps/weather-ui/**/*.ts",
+          "apps/weather-ui/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/fe/jest.config.ts",
+        "jestConfig": "apps/weather-ui/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -89,7 +94,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "fe:build"
+        "buildTarget": "weather-ui:build"
       }
     }
   }
