@@ -3,13 +3,13 @@
 
 <div class="container text-center">
     <div class="row">
-        <div class="col">
-            Column
+        <div class="col" *ngIf="usStateCapitals$ | async as capitals">
+            <common-selection-list [items]="capitals" (selectedItem$)="selectedCapitals($event)"></common-selection-list>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            Weather : {{ weather }}
+            <weather-component></weather-component>
         </div>
         <div class="col">
             test

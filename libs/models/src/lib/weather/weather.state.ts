@@ -1,3 +1,6 @@
 export interface WeatherState {
-    currentTemperature: number;
+    place: string | undefined;
+    longitude: string | undefined;
+    latitude: string | undefined;
+    currentTemperature: number | undefined;
 }

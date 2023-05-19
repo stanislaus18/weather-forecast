@@ -6,12 +6,15 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { WeatherState } from '@weather-forecast/models';
 import { WeatherApiService } from '@weather-forecast/apis';
 
-import { GetCurrentWeather } from './weather.actions';
+import { GetCurrentWeather, SetPlace } from './weather.actions';
 
 @State<WeatherState>({
   name: 'Weather',
   defaults: {
-    currentTemperature: NaN
+    place: undefined,
+    longitude: undefined,
+    latitude: undefined,
+    currentTemperature: undefined,
   },
 })
 @Injectable()
@@ -23,9 +26,17 @@ export class WeatherStateService {
     return state.currentTemperature;
   }
 
+  @Action(SetPlace)
+  setPlace(context: StateContext<WeatherState>, action: SetPlace) {
+    context.patchState({ place: action.place, latitude: action.long, longitude: action.lat });
+    context.dispatch(new GetCurrentWeather())
+  }
+
   @Action(GetCurrentWeather)
-  setUserLanguage(context: StateContext<WeatherState>, action: GetCurrentWeather) {
-    return this.weatherApiService.getCurrentWeather(52.5200, 13.4050)
+  getCurrentWeather(context: StateContext<WeatherState>) {
+    const { longitude, latitude } = context.getState();
+
+    return this.weatherApiService.getCurrentWeather(longitude as string, latitude as string)
       .pipe(
         tap(data => {
           context.patchState({ currentTemperature: Number(data.main.temp) });

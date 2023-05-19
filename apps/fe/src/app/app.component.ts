@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'libs/store/src/lib/services/api.service';
+import { PlaceDetails } from '@weather-forecast/models';
+import { CommonFacadeService, WeatherFacadeService } from '@weather-forecast/store';
+import { map, Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'weather-forecast-root',
@@ -8,15 +10,19 @@ import { ApiService } from 'libs/store/src/lib/services/api.service';
 })
 export class AppComponent implements OnInit {
   title = 'fe';
-  weather = '-';
+  usStateCapitalsDetails: PlaceDetails[] = [];
+  usStateCapitals$!: Observable<string[]>;
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private commonFacadeService: CommonFacadeService,
+    private weatherFacadeService: WeatherFacadeService
+    ) { }
 
   ngOnInit() {
-
-    this.apiService.getWeather().subscribe(d => {
-      this.weather = d.main.temp;
-    });
+    this.usStateCapitals$ = this.commonFacadeService.usStateCapitals$
+      .pipe(
+        tap(places => this.usStateCapitalsDetails = places),
+        map(places => places.map(place => place.capital)));
 
     const items = document.querySelectorAll('.carousel .carousel-item');
 
@@ -34,5 +40,10 @@ export class AppComponent implements OnInit {
         next = next.nextElementSibling
       }
     })
+  }
+
+  selectedCapitals(value: string) {
+    const place: PlaceDetails = this.usStateCapitalsDetails.find(e => e.capital === value) as PlaceDetails;
+    this.weatherFacadeService.setPlace(place?.capital, place?.longitude, place?.latitude);
   }
 }

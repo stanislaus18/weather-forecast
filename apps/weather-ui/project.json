@@ -19,8 +19,8 @@
           "apps/weather-ui/src/favicon.ico",
           "apps/weather-ui/src/assets"
         ],
-        "styles": ["apps/weather-ui/src/styles.scss"],
-        "scripts": []
+        "styles": ["node_modules/bootstrap/scss/bootstrap.scss", "apps/weather-ui/src/styles.scss"],
+        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
       },
       "configurations": {
         "production": {

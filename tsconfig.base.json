@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@weather-forecast/apis": ["libs/apis/src/index.ts"],
+      "@weather-forecast/common-ui": ["libs/common-ui/src/index.ts"],
       "@weather-forecast/models": ["libs/models/src/index.ts"],
       "@weather-forecast/store": ["libs/store/src/index.ts"],
       "@weather-forecast/weather": ["libs/weather/src/index.ts"]
