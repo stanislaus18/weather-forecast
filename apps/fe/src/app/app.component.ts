@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PlaceDetails } from '@weather-forecast/models';
 import { AirPollutionFacadeService, CommonFacadeService, ForecastFacadeService, WeatherFacadeService } from '@weather-forecast/store';
-import { map, Observable, tap } from 'rxjs';
+import { interval, map, Observable, startWith, Subscription, tap } from 'rxjs';
 
 @Component({
   selector: 'weather-forecast-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'fe';
   usStateCapitalsDetails: PlaceDetails[] = [];
   usStateCapitals$!: Observable<string[]>;
+  timeInterval: Subscription | undefined;
 
   constructor(
     private commonFacadeService: CommonFacadeService,
@@ -33,8 +34,16 @@ export class AppComponent implements OnInit {
 
     this.commonFacadeService.setPlace(place.capital, longitude, latitude);
 
-    this.weatherFacadeService.getCurrentWeather(longitude, latitude);
-    this.forecastFacadeService.getForecast(longitude, latitude);
-    this.airPollutionFacadeService.getAirPollutionData(longitude, latitude);
+    this.timeInterval?.unsubscribe();
+
+    this.timeInterval = interval(5000).pipe(startWith(0)).subscribe(() => {
+      this.weatherFacadeService.getCurrentWeather(longitude, latitude);
+      this.forecastFacadeService.getForecast(longitude, latitude);
+      this.airPollutionFacadeService.getAirPollutionData(longitude, latitude);
+    });
+  }
+
+  ngOnDestroy(): void {
+      this.timeInterval?.unsubscribe();
   }
 }
