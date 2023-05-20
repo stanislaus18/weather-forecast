@@ -6,16 +6,17 @@
 
 ## Development server
 
-Run `nx serve fe` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Info about the project 
 
-## Understand this workspace
+The web application is built keeping in mind robust, scalable, and maintainable code.
+I am using Microfontends in monorepo (Each could be build and ran successfully) 
 
-Run `nx graph` to see a diagram of the dependencies of the projects.
+Requipment 
+1. The application is build on Nx workspace (you need to set it up globally or else yarn install from the project should do the trick)
+2. Node 16 or higher thats nx requierment 
+3. please use yarn (😅), `yarn install`
+4. `yarn start` should run the entire application
+5. To run each microfrontends indivually please check the package json file 
+6. MicrofrontEnds, Library , Store , Nx 
 
-## Remote caching
-
-Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and make CI faster.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+For any other details feel free to contact me 
