@@ -34,7 +34,7 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 Contact
 Joseph Stanislaus Dsouza - stanislaus18@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/stanislaus18/weather-forecast.git)
+Project Link: [https://github.com/stanislaus18/weather-forecast.git](https://github.com/stanislaus18/weather-forecast.git)
 
 
 
