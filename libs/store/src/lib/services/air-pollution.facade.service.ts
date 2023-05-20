@@ -14,5 +14,8 @@ export class AirPollutionFacadeService {
   @Select(AirPollutionStateService.airComponents)
   airComponents$!: Observable<number>;
 
+  @Select(AirPollutionStateService.airQuality)
+  airQuality$!: Observable<string>;
+
   @Dispatch() getAirPollutionData = (longitude: string, latitude: string) => new GetAirPollutionData(longitude, latitude);
 }

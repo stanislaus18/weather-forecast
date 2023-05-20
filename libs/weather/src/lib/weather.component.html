@@ -1,1 +1,6 @@
-<p>Current Weather : {{ currentTemperature$ | async }} °C</p>
+<div class="row weather" *ngIf="currentTemperature$ | async as temp">
+    <span class="temp">{{ temp }}
+        <sup class="temp-units">&#8451; <img [src]="imageUrl"></sup>
+    </span>
+    <span class="city"> <b>{{ currentPlace$ | async }}</b>, Weather condition : {{ weather?.description}}</span>
+</div>

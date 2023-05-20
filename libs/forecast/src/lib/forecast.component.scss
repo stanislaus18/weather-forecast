@@ -18,7 +18,30 @@
 
 .carousel-item {
     display: none;
+
     &.active {
         display: inline-flex;
+    }
+}
+
+.container {
+    padding: 20px 0 0 0;
+    .future-forecast {
+        padding: inherit;
+    }
+    .card-footer {
+        color: darkslategrey;
+    }
+    .card-item {
+        text-align: left;
+
+        .temp {
+            font-size: xx-large;
+
+            img {
+                width: 118px;
+                height: 93px;
+            }
+        }
     }
 }

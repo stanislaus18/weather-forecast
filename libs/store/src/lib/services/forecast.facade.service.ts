@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { Dispatch } from '@ngxs-labs/dispatch-decorator';
 import { Select } from '@ngxs/store';
+import { Dispatch } from '@ngxs-labs/dispatch-decorator';
 import { Observable } from 'rxjs';
+
+import { ForecastStateList } from '@weather-forecast/models';
 
 import { ForecastStateService, GetForecast } from '../state';
 
@@ -12,7 +14,10 @@ import { ForecastStateService, GetForecast } from '../state';
 export class ForecastFacadeService {
 
   @Select(ForecastStateService.forecastList)
-  forecastList$!: Observable<number>;
+  forecastList$!: Observable<ForecastStateList[]>;
+
+  @Select(ForecastStateService.todaysForecast)
+  todaysForecast$!: Observable<ForecastStateList[]>;
 
   @Dispatch() getForecast = (longitude: string, latitude: string) => new GetForecast(longitude, latitude);
 }

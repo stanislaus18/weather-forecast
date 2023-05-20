@@ -1982,6 +1982,13 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@ngneat/until-destroy@^10.0.0-beta.0":
+  version "10.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@ngneat/until-destroy/-/until-destroy-10.0.0-beta.0.tgz#f91ba378c4b4647a314af975a8378997d3714bd7"
+  integrity sha512-YuvEa5bM6XjeAijSWMjTrq0dUxKE2KCT7ftQ3nu71RMZwRIMB6di/60Pf23H20jCro9J1mxArMZgiSgfx+spww==
+  dependencies:
+    tslib "^2.3.0"
+
 "@ngtools/webpack@16.0.2":
   version "16.0.2"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-16.0.2.tgz#185c6dcb4cdf5851b3c050dc166b0baa2a1df9d0"

@@ -11,6 +11,9 @@ import { GetUsStateCapitals, SetPlace } from './common.actions';
 @State<CommonState>({
   name: 'Common',
   defaults: {
+    place: undefined,
+    latitude: undefined,
+    longitude: undefined,
     getUsStateCapitals: []
   },
 })
@@ -20,7 +23,7 @@ export class CommonStateService implements NgxsAfterBootstrap {
 
   // on boot of the application get the US State capitals
   ngxsAfterBootstrap(context: StateContext<CommonState>): void {
-      context.dispatch(new GetUsStateCapitals());
+    context.dispatch(new GetUsStateCapitals());
   }
 
   @Selector()
@@ -28,8 +31,13 @@ export class CommonStateService implements NgxsAfterBootstrap {
     return state.getUsStateCapitals;
   }
 
+  @Selector()
+  static getPlace(state: CommonState) {
+    return state.place;
+  }
+
   @Action(SetPlace)
-  setForecastPlace(context: StateContext<SetPlace>, action: SetPlace) {
+  setPlace(context: StateContext<SetPlace>, action: SetPlace) {
     context.patchState({ place: action.place, latitude: action.latitude, longitude: action.longitude });
   }
 

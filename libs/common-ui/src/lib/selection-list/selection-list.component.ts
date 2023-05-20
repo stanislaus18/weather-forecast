@@ -19,22 +19,20 @@ export class SelectionListComponent implements OnDestroy {
   private _ngxDefault: string | undefined;
 
   constructor() {
-      this._ngxDefaultTimeout = setTimeout(() => {
-          this._ngxDefaultInterval = setInterval(() => {
-              const idx = Math.floor(Math.random() * (this.items.length - 1));
-              this._ngxDefault = this.items[idx];
-              // console.log('new default value = ', this._ngxDefault);
-          }, 2000);
-      }, 2000);
+    this._ngxDefaultTimeout = setTimeout(() => {
+      const idx = Math.floor(Math.random() * (this.items.length - 1));
+      this._ngxDefault = this.items[idx];
+      this.selectedItem$.emit(this._ngxDefault);
+    }, 2000);
   }
 
   public ngOnDestroy(): void {
-      clearTimeout(this._ngxDefaultTimeout);
-      clearInterval(this._ngxDefaultInterval);
+    clearTimeout(this._ngxDefaultTimeout);
+    clearInterval(this._ngxDefaultInterval);
   }
 
   public doNgxDefault(): any {
-      return this._ngxDefault;
+    return this._ngxDefault;
   }
 
   public doSelect(value: string) {

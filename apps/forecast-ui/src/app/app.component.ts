@@ -27,6 +27,8 @@ export class AppComponent implements OnInit {
 
   selectedCapitals(value: string) {
     const place: PlaceDetails = this.usStateCapitalsDetails.find(e => e.capital === value) as PlaceDetails;
-    this.forecastFacadeService.getForecast(place?.longitude, place?.latitude);
+    const {longitude, latitude } = place;
+    
+    this.forecastFacadeService.getForecast(longitude, latitude);
   }
 }

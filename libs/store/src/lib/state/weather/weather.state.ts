@@ -12,6 +12,7 @@ import { GetCurrentWeather } from './weather.actions';
   name: 'Weather',
   defaults: {
     currentTemperature: undefined,
+    weather: []
   },
 })
 @Injectable()
@@ -23,13 +24,21 @@ export class WeatherStateService {
     return state.currentTemperature;
   }
 
+  @Selector()
+  static weather(state: WeatherState) {
+    return state.weather;
+  }
+
   @Action(GetCurrentWeather)
   getCurrentWeather(context: StateContext<WeatherState>, { longitude, latitude }: GetCurrentWeather) {
 
     return this.weatherApiService.getCurrentWeather(longitude, latitude)
       .pipe(
         tap(data => {
-          context.patchState({ currentTemperature: Number(data.main.temp) });
+          context.patchState({
+            currentTemperature: Number(data.main.temp),
+            weather: data.weather
+          });
         }),
         catchError(error => {
           console.log(error);

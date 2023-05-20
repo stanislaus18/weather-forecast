@@ -1,5 +1,10 @@
 <div class="container text-center">
     <div class="row">
+        <div class="col">
+            <h2>Weather, Forecast and Air Pollution of given US state captials</h2>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-3" *ngIf="usStateCapitals$ | async as capitals">
             <common-selection-list [items]="capitals" (selectedItem$)="selectedCapitals($event)">
             </common-selection-list>

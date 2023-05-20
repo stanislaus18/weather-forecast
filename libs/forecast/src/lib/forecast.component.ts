@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ForecastFacadeService } from '@weather-forecast/store';
 import { Observable, tap } from 'rxjs';
+
+import { ForecastStateList } from '@weather-forecast/models';
+import { ForecastFacadeService } from '@weather-forecast/store';
 
 @Component({
   selector: 'forecast-component',
@@ -9,10 +11,12 @@ import { Observable, tap } from 'rxjs';
 })
 export class ForecastComponent implements OnInit {
   forecastList$: Observable<any> | undefined;
+  todaysForecast$: Observable<ForecastStateList[]> | undefined;
 
   constructor(private forecastFacadeService: ForecastFacadeService) { }
 
   ngOnInit() {
+    this.todaysForecast$ = this.forecastFacadeService.todaysForecast$;
     this.forecastList$ = this.forecastFacadeService.forecastList$.pipe(tap(() => {
       setTimeout(() => {
         const items = document.querySelectorAll('.carousel .carousel-item');
@@ -26,7 +30,7 @@ export class ForecastComponent implements OnInit {
               // wrap carousel by using first child
               next = items[0]
             }
-            const cloneChild = next.cloneNode(true) as any;
+            const cloneChild = next.cloneNode(true) as HTMLElement;
             el.appendChild(cloneChild.children[0])
             next = next.nextElementSibling
           }

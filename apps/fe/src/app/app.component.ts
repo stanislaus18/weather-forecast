@@ -28,9 +28,13 @@ export class AppComponent implements OnInit {
   }
 
   selectedCapitals(value: string) {
-    const place: PlaceDetails = this.usStateCapitalsDetails.find(e => e.capital === value) as PlaceDetails;
-    this.weatherFacadeService.getCurrentWeather(place?.longitude, place?.latitude);
-    this.forecastFacadeService.getForecast(place?.longitude, place?.latitude);
-    this.airPollutionFacadeService.getAirPollutionData(place?.longitude, place?.latitude);
+    const place: PlaceDetails = this.usStateCapitalsDetails.find(data => data.capital === value) as PlaceDetails;
+    const { longitude, latitude } = place;
+
+    this.commonFacadeService.setPlace(place.capital, longitude, latitude);
+
+    this.weatherFacadeService.getCurrentWeather(longitude, latitude);
+    this.forecastFacadeService.getForecast(longitude, latitude);
+    this.airPollutionFacadeService.getAirPollutionData(longitude, latitude);
   }
 }

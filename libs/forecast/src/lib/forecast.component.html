@@ -1,15 +1,25 @@
 <div class="container text-center my-3">
-    <h2 class="font-weight-light">Weather forecast</h2>
+    <h2 class="font-weight-light">Todays forecast</h2>
+    <div class="row">
+        <div class="col card-item" *ngFor="let todaysForecast of todaysForecast$ | async">
+            <div class="row temp"><span>{{ todaysForecast.temp }}<sup>&#8451; <img [src]="todaysForecast.image"></sup></span></div>
+            <div>{{ todaysForecast.time }}, {{ todaysForecast.description }}</div>
+        </div>
+    </div>
+
+    <h2 class="font-weight-light future-forecast">Coming days forecast</h2>
     <div class="row mx-auto my-auto justify-content-center">
         <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item {{ i === 0 ? 'active' : ''}}" *ngFor="let fc of forecastList$ | async; let i = index">
+                <div class="carousel-item {{ i === 0 ? 'active' : ''}}"
+                    *ngFor="let fc of forecastList$ | async; let i = index">
                     <div class="col-md-3">
                         <div class="card">
                             <div class="card-img">
-                                <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                <img src="https://via.placeholder.com/500x400/000?text={{ fc.description }}" class="img-fluid">
                             </div>
-                            <div class="card-img-overlay">Temp = {{ fc.temp }}, description = {{ fc.descriptions }}</div>
+                            <div class="card-img-overlay"><span>{{ fc.temp }}<sup>&#8451; <img [src]="fc.image"></sup></span></div>
+                            <div class="card-footer">{{ fc.date }}, {{ fc.time}}</div>
                         </div>
                     </div>
                 </div>
@@ -24,5 +34,4 @@
             </a>
         </div>
     </div>
-    <h5 class="mt-2 fw-light">advances one slide at a time</h5>
 </div>

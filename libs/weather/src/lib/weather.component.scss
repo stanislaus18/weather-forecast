@@ -1,0 +1,18 @@
+.weather {
+    text-align: left;
+    padding: 0 0 0 31px;
+
+    .temp {
+        font-size: 80px;
+
+        .temp-units {
+            font-size: x-large;
+            top: -2em;
+
+            &img {
+                width: 118px;
+                height: 93px;
+            }
+        }
+    }
+}
