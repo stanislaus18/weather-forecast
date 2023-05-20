@@ -34,6 +34,18 @@ This is an example of how you may give instructions on setting up your project l
 2. `yarn start:forecast`
 3. `yarn start:air-pollution`
 
+# Others
+  Application is using polling mechanism to pull data from api for every 5 seconds, to give you latest data
+  
+  Redux store holds most of the data (if you have redux tool you could see the infomation there store
+  
+  Forecast is restricted to 5 days only
+  
+  you can select any of USA city for weather conditions through the drop down they all reactive changes 
+  
+  ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/3beaefef-02e4-43b3-859e-3c158da47c46)
+
+
 
 # License
 Distributed under the MIT License. See LICENSE.txt for more information.
