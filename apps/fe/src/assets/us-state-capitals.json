@@ -2,301 +2,301 @@
     {
       "state": "Alabama",
       "capital": "Montgomery",
-      "latitude": 32.377716,
-      "longitude": -86.300568
+      "longitude": 32.377716,
+      "latitude": -86.300568
     },
     {
       "state": "Alaska",
       "capital": "Juneau",
-      "latitude": 58.301598,
-      "longitude": -134.420212
+      "longitude": 58.301598,
+      "latitude": -134.420212
     },
     {
       "state": "Arizona",
       "capital": "Phoenix",
-      "latitude": 33.448143,
-      "longitude": -112.096962
+      "longitude": 33.448143,
+      "latitude": -112.096962
     },
     {
       "state": "Arkansas",
       "capital": "Little Rock",
-      "latitude": 34.746613,
-      "longitude": -92.288986
+      "longitude": 34.746613,
+      "latitude": -92.288986
     },
     {
       "state": "California",
       "capital": "Sacramento",
-      "latitude": 38.576668,
-      "longitude": -121.493629
+      "longitude": 38.576668,
+      "latitude": -121.493629
     },
     {
       "state": "Colorado",
       "capital": "Denver",
-      "latitude": 39.739227,
-      "longitude": -104.984856
+      "longitude": 39.739227,
+      "latitude": -104.984856
     },
     {
       "state": "Connecticut",
       "capital": "Hartford<br>",
-      "latitude": 41.764046,
-      "longitude": -72.682198
+      "longitude": 41.764046,
+      "latitude": -72.682198
     },
     {
       "state": "Delaware",
       "capital": "Dover",
-      "latitude": 39.157307,
-      "longitude": -75.519722
+      "longitude": 39.157307,
+      "latitude": -75.519722
     },
     {
       "state": "Hawaii",
       "capital": "Honolulu",
-      "latitude": 21.307442,
-      "longitude": -157.857376
+      "longitude": 21.307442,
+      "latitude": -157.857376
     },
     {
       "state": "Florida",
       "capital": "Tallahassee",
-      "latitude": 30.438118,
-      "longitude": -84.281296
+      "longitude": 30.438118,
+      "latitude": -84.281296
     },
     {
       "state": "Georgia",
       "capital": "Atlanta<br>",
-      "latitude": 33.749027,
-      "longitude": -84.388229
+      "longitude": 33.749027,
+      "latitude": -84.388229
     },
     {
       "state": "Idaho",
       "capital": "Boise",
-      "latitude": 43.617775,
-      "longitude": -116.199722
+      "longitude": 43.617775,
+      "latitude": -116.199722
     },
     {
       "state": "Illinois",
       "capital": "Springfield",
-      "latitude": 39.798363,
-      "longitude": -89.654961
+      "longitude": 39.798363,
+      "latitude": -89.654961
     },
     {
       "state": "Indiana",
       "capital": "Indianapolis",
-      "latitude": 39.768623,
-      "longitude": -86.162643
+      "longitude": 39.768623,
+      "latitude": -86.162643
     },
     {
       "state": "Iowa",
       "capital": "Des Moines",
-      "latitude": 41.591087,
-      "longitude": -93.603729
+      "longitude": 41.591087,
+      "latitude": -93.603729
     },
     {
       "state": "Kansas",
       "capital": "Topeka",
-      "latitude": 39.048191,
-      "longitude": -95.677956
+      "longitude": 39.048191,
+      "latitude": -95.677956
     },
     {
       "state": "Kentucky",
       "capital": "Frankfort",
-      "latitude": 38.186722,
-      "longitude": -84.875374
+      "longitude": 38.186722,
+      "latitude": -84.875374
     },
     {
       "state": "Louisiana",
       "capital": "Baton Rouge",
-      "latitude": 30.457069,
-      "longitude": -91.187393
+      "longitude": 30.457069,
+      "latitude": -91.187393
     },
     {
       "state": "Maine",
       "capital": "Augusta",
-      "latitude": 44.307167,
-      "longitude": -69.781693
+      "longitude": 44.307167,
+      "latitude": -69.781693
     },
     {
       "state": "Maryland",
       "capital": "Annapolis",
-      "latitude": 38.978764,
-      "longitude": -76.490936
+      "longitude": 38.978764,
+      "latitude": -76.490936
     },
     {
       "state": "Massachusetts",
       "capital": "Boston",
-      "latitude": 42.358162,
-      "longitude": -71.063698
+      "longitude": 42.358162,
+      "latitude": -71.063698
     },
     {
       "state": "Michigan",
       "capital": "Lansing",
-      "latitude": 42.733635,
-      "longitude": -84.555328
+      "longitude": 42.733635,
+      "latitude": -84.555328
     },
     {
       "state": "Minnesota",
       "capital": "St. Paul",
-      "latitude": 44.955097,
-      "longitude": -93.102211
+      "longitude": 44.955097,
+      "latitude": -93.102211
     },
     {
       "state": "Mississippi",
       "capital": "Jackson",
-      "latitude": 32.303848,
-      "longitude": -90.182106
+      "longitude": 32.303848,
+      "latitude": -90.182106
     },
     {
       "state": "Missouri",
       "capital": "Jefferson City",
-      "latitude": 38.579201,
-      "longitude": -92.172935
+      "longitude": 38.579201,
+      "latitude": -92.172935
     },
     {
       "state": "Montana",
       "capital": "Helena",
-      "latitude": 46.585709,
-      "longitude": -112.018417
+      "longitude": 46.585709,
+      "latitude": -112.018417
     },
     {
       "state": "Nebraska",
       "capital": "Lincoln",
-      "latitude": 40.808075,
-      "longitude": -96.699654
+      "longitude": 40.808075,
+      "latitude": -96.699654
     },
     {
       "state": "Nevada",
       "capital": "Carson City",
-      "latitude": 39.163914,
-      "longitude": -119.766121
+      "longitude": 39.163914,
+      "latitude": -119.766121
     },
     {
       "state": "New Hampshire",
       "capital": "Concord",
-      "latitude": 43.206898,
-      "longitude": -71.537994
+      "longitude": 43.206898,
+      "latitude": -71.537994
     },
     {
       "state": "New Jersey",
       "capital": "Trenton",
-      "latitude": 40.220596,
-      "longitude": -74.769913
+      "longitude": 40.220596,
+      "latitude": -74.769913
     },
     {
       "state": "New Mexico",
       "capital": "Santa Fe",
-      "latitude": 35.68224,
-      "longitude": -105.939728
+      "longitude": 35.68224,
+      "latitude": -105.939728
     },
     {
       "state": "North Carolina",
       "capital": "Raleigh",
-      "latitude": 35.78043,
-      "longitude": -78.639099
+      "longitude": 35.78043,
+      "latitude": -78.639099
     },
     {
       "state": "North Dakota",
       "capital": "Bismarck",
-      "latitude": 46.82085,
-      "longitude": -100.783318
+      "longitude": 46.82085,
+      "latitude": -100.783318
     },
     {
       "state": "New York",
       "capital": "Albany",
-      "latitude": 42.652843,
-      "longitude": -73.757874
+      "longitude": 42.652843,
+      "latitude": -73.757874
     },
     {
       "state": "Ohio",
       "capital": "Columbus",
-      "latitude": 39.961346,
-      "longitude": -82.999069
+      "longitude": 39.961346,
+      "latitude": -82.999069
     },
     {
       "state": "Oklahoma",
       "capital": "Oklahoma City",
-      "latitude": 35.492207,
-      "longitude": -97.503342
+      "longitude": 35.492207,
+      "latitude": -97.503342
     },
     {
       "state": "Oregon",
       "capital": "Salem",
-      "latitude": 44.938461,
-      "longitude": -123.030403
+      "longitude": 44.938461,
+      "latitude": -123.030403
     },
     {
       "state": "Pennsylvania",
       "capital": "Harrisburg",
-      "latitude": 40.264378,
-      "longitude": -76.883598
+      "longitude": 40.264378,
+      "latitude": -76.883598
     },
     {
       "state": "Rhode Island",
       "capital": "Providence",
-      "latitude": 41.830914,
-      "longitude": -71.414963
+      "longitude": 41.830914,
+      "latitude": -71.414963
     },
     {
       "state": "South Carolina",
       "capital": "Columbia",
-      "latitude": 34.000343,
-      "longitude": -81.033211
+      "longitude": 34.000343,
+      "latitude": -81.033211
     },
     {
       "state": "South Dakota",
       "capital": "Pierre",
-      "latitude": 44.367031,
-      "longitude": -100.346405
+      "longitude": 44.367031,
+      "latitude": -100.346405
     },
     {
       "state": "Tennessee",
       "capital": "Nashville",
-      "latitude": 36.16581,
-      "longitude": -86.784241
+      "longitude": 36.16581,
+      "latitude": -86.784241
     },
     {
       "state": "Texas",
       "capital": "Austin",
-      "latitude": 30.27467,
-      "longitude": -97.740349
+      "longitude": 30.27467,
+      "latitude": -97.740349
     },
     {
       "state": "Utah",
       "capital": "Salt Lake City",
-      "latitude": 40.777477,
-      "longitude": -111.888237
+      "longitude": 40.777477,
+      "latitude": -111.888237
     },
     {
       "state": "Vermont",
       "capital": "Montpelier",
-      "latitude": 44.262436,
-      "longitude": -72.580536
+      "longitude": 44.262436,
+      "latitude": -72.580536
     },
     {
       "state": "Virginia",
       "capital": "Richmond",
-      "latitude": 37.538857,
-      "longitude": -77.43364
+      "longitude": 37.538857,
+      "latitude": -77.43364
     },
     {
       "state": "Washington",
       "capital": "Olympia",
-      "latitude": 47.035805,
-      "longitude": -122.905014
+      "longitude": 47.035805,
+      "latitude": -122.905014
     },
     {
       "state": "West Virginia",
       "capital": "Charleston",
-      "latitude": 38.336246,
-      "longitude": -81.612328
+      "longitude": 38.336246,
+      "latitude": -81.612328
     },
     {
       "state": "Wisconsin",
       "capital": "Madison",
-      "latitude": 43.074684,
-      "longitude": -89.384445
+      "longitude": 43.074684,
+      "latitude": -89.384445
     },
     {
       "state": "Wyoming",
       "capital": "Cheyenne",
-      "latitude": 41.140259,
-      "longitude": -104.820236
+      "longitude": 41.140259,
+      "latitude": -104.820236
     }
   ]

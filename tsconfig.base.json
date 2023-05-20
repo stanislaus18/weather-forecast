@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@weather-forecast/air-pollution": ["libs/air-pollution/src/index.ts"],
       "@weather-forecast/apis": ["libs/apis/src/index.ts"],
       "@weather-forecast/common-ui": ["libs/common-ui/src/index.ts"],
+      "@weather-forecast/forecast": ["libs/forecast/src/index.ts"],
       "@weather-forecast/models": ["libs/models/src/index.ts"],
       "@weather-forecast/store": ["libs/store/src/index.ts"],
       "@weather-forecast/weather": ["libs/weather/src/index.ts"]

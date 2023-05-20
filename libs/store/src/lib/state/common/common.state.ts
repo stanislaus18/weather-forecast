@@ -6,7 +6,7 @@ import { Action, NgxsAfterBootstrap, Selector, State, StateContext } from '@ngxs
 import { CommonState } from '@weather-forecast/models';
 import { AvailablePlaceService } from '@weather-forecast/apis';
 
-import { GetUsStateCapitals } from './common.actions';
+import { GetUsStateCapitals, SetPlace } from './common.actions';
 
 @State<CommonState>({
   name: 'Common',
@@ -18,6 +18,7 @@ import { GetUsStateCapitals } from './common.actions';
 export class CommonStateService implements NgxsAfterBootstrap {
   constructor(private availablePlaceService: AvailablePlaceService) { }
 
+  // on boot of the application get the US State capitals
   ngxsAfterBootstrap(context: StateContext<CommonState>): void {
       context.dispatch(new GetUsStateCapitals());
   }
@@ -25,6 +26,11 @@ export class CommonStateService implements NgxsAfterBootstrap {
   @Selector()
   static getUsStateCapitals(state: CommonState) {
     return state.getUsStateCapitals;
+  }
+
+  @Action(SetPlace)
+  setForecastPlace(context: StateContext<SetPlace>, action: SetPlace) {
+    context.patchState({ place: action.place, latitude: action.latitude, longitude: action.longitude });
   }
 
   @Action(GetUsStateCapitals)

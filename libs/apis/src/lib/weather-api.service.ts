@@ -3,18 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Weather } from '@weather-forecast/models';
+import { URL, APP_ID, UNITS } from './constants';
 
 @Injectable({
     providedIn: 'root',
 })
 export class WeatherApiService {
-    private readonly url = 'http://api.openweathermap.org/data/2.5/weather';
-    private readonly appid = '4ea498dfea3e22f1441c39c2db35141c';
-    private readonly units = 'metric';
-
     constructor(private httpClient: HttpClient) { }
 
     getCurrentWeather(lat: string, lon: string): Observable<Weather> {
-        return this.httpClient.get<Weather>(`${this.url}?lat=${lat}&lon=${lon}&appid=${this.appid}&units=${this.units}`);
+        return this.httpClient.get<Weather>(`${URL}weather?lat=${lat}&lon=${lon}&appid=${APP_ID}&units=${UNITS}`);
     }
 }

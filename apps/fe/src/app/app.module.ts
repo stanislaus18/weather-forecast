@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
 
 import { appRoutes } from './app.routes';
+import { environment } from '../environment';
 import { AppComponent } from './app.component';
 
-import { SelectionUiModule } from '@weather-forecast/common-ui';
-import { CommonStateService, WeatherStateModule } from '@weather-forecast/store';
 import { WeatherModule } from '@weather-forecast/weather';
-import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
-import { environment } from '../environment';
-import { NgxsModule } from '@ngxs/store';
+import { ForecastModule } from '@weather-forecast/forecast';
+import { SelectionUiModule } from '@weather-forecast/common-ui';
+import { AirPollutionModule } from '@weather-forecast/air-pollution';
+import { CommonStateService, ForecastStateModule, WeatherStateModule, AirPollutionStateModule } from '@weather-forecast/store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +24,10 @@ import { NgxsModule } from '@ngxs/store';
     SelectionUiModule,
     WeatherModule, 
     WeatherStateModule,
+    ForecastModule,
+    ForecastStateModule,
+    AirPollutionModule,
+    AirPollutionStateModule,
     environment.plugins,
     NgxsModule.forRoot([CommonStateService]),
     NgxsDispatchPluginModule.forRoot(),

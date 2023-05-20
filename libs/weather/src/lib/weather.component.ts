@@ -12,8 +12,6 @@ export class WeatherComponent implements OnInit {
   currentTemperature$: Observable<number> | undefined;
   
   ngOnInit(): void {
-    // fire an intial request to get weather
-    this.weatherFacadeService.setPlace('Berlin', '52.5200','13.4050');
     this.currentTemperature$ = this.weatherFacadeService.currentTemperature$;
   }
   

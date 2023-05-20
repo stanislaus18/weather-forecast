@@ -1,10 +1,4 @@
-import { Sys } from './sys';
-import { Wind } from './wind';
-import { Main } from './main';
-import { Rain } from './rain';
-import { Coord } from './coord';
-import { Clouds } from './clouds';
-import { WeatherElement } from './weather-element';
+import { Clouds, Coord, Main, Rain, Sys, WeatherElement, Wind } from '../common';
 
 export interface Weather {
     coord:      Coord;
