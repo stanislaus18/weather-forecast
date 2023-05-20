@@ -28,6 +28,12 @@ This is an example of how you may give instructions on setting up your project l
 2. `yarn install`
 3. `yarn start`
 
+# To run microfrontends instead of whole application
+1. `yarn start:weather`
+2. `yarn start:forecast`
+3. `yarn start:air-pollution`
+
+
 # License
 Distributed under the MIT License. See LICENSE.txt for more information.
 
