@@ -6,7 +6,11 @@
     "start": "nx run fe:serve:development",
     "start:prod": "nx run fe:serve:production",
     "start:weather": "nx run weather-ui:serve:development",
-    "start:weather:prod": "nx run weather-ui:serve:production"
+    "start:weather:prod": "nx run weather-ui:serve:production",
+    "start:forecast": "nx run forecast-ui:serve:development",
+    "start:forecast:prod": "nx run forecast-ui:serve:production",
+    "start:air-pollution": "nx run air-pollution-ui:serve:development",
+    "start:air-pollution:prod": "nx run air-pollution-ui:serve:production"
   },
   "private": true,
   "dependencies": {

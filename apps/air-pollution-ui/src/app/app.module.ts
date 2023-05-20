@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
 
-import { WeatherModule } from '@weather-forecast/weather';
 import { SelectionUiModule } from '@weather-forecast/common-ui';
-import { CommonStateService, WeatherStateModule } from '@weather-forecast/store';
+import { AirPollutionModule } from '@weather-forecast/air-pollution';
+import { AirPollutionStateModule, CommonStateService } from '@weather-forecast/store';
 
 import { environment } from '../environment';
 import { AppComponent } from './app.component';
@@ -19,11 +19,10 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     // Common ui Library
     SelectionUiModule,
-     // Weather library
-    WeatherModule, 
-    WeatherStateModule,
+    // Air Pollution Library
+    AirPollutionModule,
+    AirPollutionStateModule,
     environment.plugins,
-    NgxsModule.forRoot([]),
     NgxsModule.forRoot([CommonStateService]),
     NgxsDispatchPluginModule.forRoot(),
   ],

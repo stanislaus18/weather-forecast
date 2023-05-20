@@ -1,0 +1,101 @@
+{
+  "name": "air-pollution-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "weather-forecast",
+  "sourceRoot": "apps/air-pollution-ui/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/air-pollution-ui",
+        "index": "apps/air-pollution-ui/src/index.html",
+        "main": "apps/air-pollution-ui/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/air-pollution-ui/tsconfig.app.json",
+        "assets": [
+          "apps/air-pollution-ui/src/favicon.ico",
+          "apps/air-pollution-ui/src/assets"
+        ],
+        "styles": ["node_modules/bootstrap/scss/bootstrap.scss", "apps/air-pollution-ui/src/styles.scss"],
+        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "air-pollution-ui:build:production"
+        },
+        "development": {
+          "browserTarget": "air-pollution-ui:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "air-pollution-ui:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/air-pollution-ui/**/*.ts",
+          "apps/air-pollution-ui/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/air-pollution-ui/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "air-pollution-ui:build"
+      }
+    }
+  }
+}

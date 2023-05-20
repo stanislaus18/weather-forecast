@@ -21,13 +21,18 @@ import { CommonStateService, ForecastStateModule, WeatherStateModule, AirPolluti
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     HttpClientModule,
+    // Common ui Library
     SelectionUiModule,
+    // Weather library
     WeatherModule, 
     WeatherStateModule,
+    // Forecast Library
     ForecastModule,
     ForecastStateModule,
+    // Air Pollution Library
     AirPollutionModule,
     AirPollutionStateModule,
+    // Nx plugins
     environment.plugins,
     NgxsModule.forRoot([CommonStateService]),
     NgxsDispatchPluginModule.forRoot(),

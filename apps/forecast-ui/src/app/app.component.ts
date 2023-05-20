@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlaceDetails } from '@weather-forecast/models';
-import { AirPollutionFacadeService, CommonFacadeService, ForecastFacadeService, WeatherFacadeService } from '@weather-forecast/store';
+import { CommonFacadeService, ForecastFacadeService } from '@weather-forecast/store';
 import { map, Observable, tap } from 'rxjs';
 
 @Component({
@@ -9,15 +9,13 @@ import { map, Observable, tap } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'fe';
+  title = 'forecast-ui';
   usStateCapitalsDetails: PlaceDetails[] = [];
   usStateCapitals$!: Observable<string[]>;
 
   constructor(
     private commonFacadeService: CommonFacadeService,
-    private weatherFacadeService: WeatherFacadeService,
     private forecastFacadeService: ForecastFacadeService,
-    private airPollutionFacadeService: AirPollutionFacadeService
   ) { }
 
   ngOnInit() {
@@ -29,8 +27,6 @@ export class AppComponent implements OnInit {
 
   selectedCapitals(value: string) {
     const place: PlaceDetails = this.usStateCapitalsDetails.find(e => e.capital === value) as PlaceDetails;
-    this.weatherFacadeService.getCurrentWeather(place?.longitude, place?.latitude);
     this.forecastFacadeService.getForecast(place?.longitude, place?.latitude);
-    this.airPollutionFacadeService.getAirPollutionData(place?.longitude, place?.latitude);
   }
 }

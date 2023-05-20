@@ -1,0 +1,302 @@
+[
+    {
+      "state": "Alabama",
+      "capital": "Montgomery",
+      "longitude": 32.377716,
+      "latitude": -86.300568
+    },
+    {
+      "state": "Alaska",
+      "capital": "Juneau",
+      "longitude": 58.301598,
+      "latitude": -134.420212
+    },
+    {
+      "state": "Arizona",
+      "capital": "Phoenix",
+      "longitude": 33.448143,
+      "latitude": -112.096962
+    },
+    {
+      "state": "Arkansas",
+      "capital": "Little Rock",
+      "longitude": 34.746613,
+      "latitude": -92.288986
+    },
+    {
+      "state": "California",
+      "capital": "Sacramento",
+      "longitude": 38.576668,
+      "latitude": -121.493629
+    },
+    {
+      "state": "Colorado",
+      "capital": "Denver",
+      "longitude": 39.739227,
+      "latitude": -104.984856
+    },
+    {
+      "state": "Connecticut",
+      "capital": "Hartford<br>",
+      "longitude": 41.764046,
+      "latitude": -72.682198
+    },
+    {
+      "state": "Delaware",
+      "capital": "Dover",
+      "longitude": 39.157307,
+      "latitude": -75.519722
+    },
+    {
+      "state": "Hawaii",
+      "capital": "Honolulu",
+      "longitude": 21.307442,
+      "latitude": -157.857376
+    },
+    {
+      "state": "Florida",
+      "capital": "Tallahassee",
+      "longitude": 30.438118,
+      "latitude": -84.281296
+    },
+    {
+      "state": "Georgia",
+      "capital": "Atlanta<br>",
+      "longitude": 33.749027,
+      "latitude": -84.388229
+    },
+    {
+      "state": "Idaho",
+      "capital": "Boise",
+      "longitude": 43.617775,
+      "latitude": -116.199722
+    },
+    {
+      "state": "Illinois",
+      "capital": "Springfield",
+      "longitude": 39.798363,
+      "latitude": -89.654961
+    },
+    {
+      "state": "Indiana",
+      "capital": "Indianapolis",
+      "longitude": 39.768623,
+      "latitude": -86.162643
+    },
+    {
+      "state": "Iowa",
+      "capital": "Des Moines",
+      "longitude": 41.591087,
+      "latitude": -93.603729
+    },
+    {
+      "state": "Kansas",
+      "capital": "Topeka",
+      "longitude": 39.048191,
+      "latitude": -95.677956
+    },
+    {
+      "state": "Kentucky",
+      "capital": "Frankfort",
+      "longitude": 38.186722,
+      "latitude": -84.875374
+    },
+    {
+      "state": "Louisiana",
+      "capital": "Baton Rouge",
+      "longitude": 30.457069,
+      "latitude": -91.187393
+    },
+    {
+      "state": "Maine",
+      "capital": "Augusta",
+      "longitude": 44.307167,
+      "latitude": -69.781693
+    },
+    {
+      "state": "Maryland",
+      "capital": "Annapolis",
+      "longitude": 38.978764,
+      "latitude": -76.490936
+    },
+    {
+      "state": "Massachusetts",
+      "capital": "Boston",
+      "longitude": 42.358162,
+      "latitude": -71.063698
+    },
+    {
+      "state": "Michigan",
+      "capital": "Lansing",
+      "longitude": 42.733635,
+      "latitude": -84.555328
+    },
+    {
+      "state": "Minnesota",
+      "capital": "St. Paul",
+      "longitude": 44.955097,
+      "latitude": -93.102211
+    },
+    {
+      "state": "Mississippi",
+      "capital": "Jackson",
+      "longitude": 32.303848,
+      "latitude": -90.182106
+    },
+    {
+      "state": "Missouri",
+      "capital": "Jefferson City",
+      "longitude": 38.579201,
+      "latitude": -92.172935
+    },
+    {
+      "state": "Montana",
+      "capital": "Helena",
+      "longitude": 46.585709,
+      "latitude": -112.018417
+    },
+    {
+      "state": "Nebraska",
+      "capital": "Lincoln",
+      "longitude": 40.808075,
+      "latitude": -96.699654
+    },
+    {
+      "state": "Nevada",
+      "capital": "Carson City",
+      "longitude": 39.163914,
+      "latitude": -119.766121
+    },
+    {
+      "state": "New Hampshire",
+      "capital": "Concord",
+      "longitude": 43.206898,
+      "latitude": -71.537994
+    },
+    {
+      "state": "New Jersey",
+      "capital": "Trenton",
+      "longitude": 40.220596,
+      "latitude": -74.769913
+    },
+    {
+      "state": "New Mexico",
+      "capital": "Santa Fe",
+      "longitude": 35.68224,
+      "latitude": -105.939728
+    },
+    {
+      "state": "North Carolina",
+      "capital": "Raleigh",
+      "longitude": 35.78043,
+      "latitude": -78.639099
+    },
+    {
+      "state": "North Dakota",
+      "capital": "Bismarck",
+      "longitude": 46.82085,
+      "latitude": -100.783318
+    },
+    {
+      "state": "New York",
+      "capital": "Albany",
+      "longitude": 42.652843,
+      "latitude": -73.757874
+    },
+    {
+      "state": "Ohio",
+      "capital": "Columbus",
+      "longitude": 39.961346,
+      "latitude": -82.999069
+    },
+    {
+      "state": "Oklahoma",
+      "capital": "Oklahoma City",
+      "longitude": 35.492207,
+      "latitude": -97.503342
+    },
+    {
+      "state": "Oregon",
+      "capital": "Salem",
+      "longitude": 44.938461,
+      "latitude": -123.030403
+    },
+    {
+      "state": "Pennsylvania",
+      "capital": "Harrisburg",
+      "longitude": 40.264378,
+      "latitude": -76.883598
+    },
+    {
+      "state": "Rhode Island",
+      "capital": "Providence",
+      "longitude": 41.830914,
+      "latitude": -71.414963
+    },
+    {
+      "state": "South Carolina",
+      "capital": "Columbia",
+      "longitude": 34.000343,
+      "latitude": -81.033211
+    },
+    {
+      "state": "South Dakota",
+      "capital": "Pierre",
+      "longitude": 44.367031,
+      "latitude": -100.346405
+    },
+    {
+      "state": "Tennessee",
+      "capital": "Nashville",
+      "longitude": 36.16581,
+      "latitude": -86.784241
+    },
+    {
+      "state": "Texas",
+      "capital": "Austin",
+      "longitude": 30.27467,
+      "latitude": -97.740349
+    },
+    {
+      "state": "Utah",
+      "capital": "Salt Lake City",
+      "longitude": 40.777477,
+      "latitude": -111.888237
+    },
+    {
+      "state": "Vermont",
+      "capital": "Montpelier",
+      "longitude": 44.262436,
+      "latitude": -72.580536
+    },
+    {
+      "state": "Virginia",
+      "capital": "Richmond",
+      "longitude": 37.538857,
+      "latitude": -77.43364
+    },
+    {
+      "state": "Washington",
+      "capital": "Olympia",
+      "longitude": 47.035805,
+      "latitude": -122.905014
+    },
+    {
+      "state": "West Virginia",
+      "capital": "Charleston",
+      "longitude": 38.336246,
+      "latitude": -81.612328
+    },
+    {
+      "state": "Wisconsin",
+      "capital": "Madison",
+      "longitude": 43.074684,
+      "latitude": -89.384445
+    },
+    {
+      "state": "Wyoming",
+      "capital": "Cheyenne",
+      "longitude": 41.140259,
+      "latitude": -104.820236
+    }
+  ]
