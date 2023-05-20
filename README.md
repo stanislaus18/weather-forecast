@@ -20,3 +20,8 @@ Requipment
 6. MicrofrontEnds, Library , Store , Nx 
 
 For any other details feel free to contact me 
+
+Everything is placed in one page, I have not used routing as it was not necessary 
+
+![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/baf36f48-6f25-46e1-a7b6-eec6d13c2d5d)
+
