@@ -19,7 +19,7 @@ This is an example of how you may give instructions on setting up your project l
 # Prerequisites
 1. Node 16 or higher
 2. Angular 16 
-3. yarn '`npm install --global yarn)` version 1.22.19
+3. yarn `npm install --global yarn` version 1.22.19
 4. Nx CLI ( could also be install with package.json of application for local)
 5. openweathermap API Key (included in project)  
 6. and ofcourse editor to view the code (Recommended vscode) 
