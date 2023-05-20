@@ -26,7 +26,7 @@ This is an example of how you may give instructions on setting up your project l
 # Installation
 1. `git clone https://github.com/stanislaus18/weather-forecast.git`
 2. `yarn install`
-3. `yarn start fe`
+3. `yarn start`
 
 # License
 Distributed under the MIT License. See LICENSE.txt for more information.
