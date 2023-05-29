@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { NgxsModule } from '@ngxs/store';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxEchartsModule } from 'ngx-echarts';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
 
@@ -36,6 +37,14 @@ import { CommonStateService, ForecastStateModule, WeatherStateModule, AirPolluti
     environment.plugins,
     NgxsModule.forRoot([CommonStateService]),
     NgxsDispatchPluginModule.forRoot(),
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

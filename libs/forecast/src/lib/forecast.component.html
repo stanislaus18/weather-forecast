@@ -1,13 +1,7 @@
 <div class="container text-center my-3">
     <h2 class="font-weight-light">Todays forecast</h2>
-    <div class="row">
-        <div class="col card-item" *ngFor="let todaysForecast of todaysForecast$ | async">
-            <div class="row temp"><span>{{ todaysForecast.temperature }}<sup>&#8451; 
-                <!-- <img [src]="todaysForecast.image">-->
-            </sup></span></div>
-            <div>{{ todaysForecast.time }}, {{ todaysForecast.description }}</div>
-        </div>
-    </div>
+    
+    <div echarts [options]="chartOption" class="demo-chart" *ngIf=" todaysForecast$ | async"></div>
 
     <h2 class="font-weight-light future-forecast">Coming days forecast</h2>
     <div class="row mx-auto my-auto justify-content-center">

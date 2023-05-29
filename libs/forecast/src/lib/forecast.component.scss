@@ -25,13 +25,20 @@
 }
 
 .container {
+    .demo-chart {
+        height: 400px;
+    }
+
     padding: 20px 0 0 0;
+
     .future-forecast {
         padding: inherit;
     }
+
     .card-footer {
         color: darkslategrey;
     }
+
     .card-item {
         text-align: left;
 
