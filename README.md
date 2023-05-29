@@ -34,6 +34,9 @@ This is an example of how you may give instructions on setting up your project l
 2. `yarn start:forecast`
 3. `yarn start:air-pollution`
 
+# To test the application 
+  `yarn test:ci`
+
 # Others
   Application is using polling mechanism to pull data from api for every 5 seconds, to give you latest data
   
@@ -42,14 +45,18 @@ This is an example of how you may give instructions on setting up your project l
   you can select any of USA city for weather conditions through the drop down they all reactive changes 
   
   Redux store holds most of the data (if you have redux tool you could see the infomation there store
-  ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/3beaefef-02e4-43b3-859e-3c158da47c46)
+ <img width="669" alt="image" src="https://github.com/stanislaus18/weather-forecast/assets/17940960/b18049e5-c20f-4e5a-8b85-f9a024644752">
   
 
  # Entire application
-  1. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c0e42428-8f0b-408b-9eac-28b72e5852fd)
-  2. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c772ff80-24ee-4110-aec9-bd1edf1190de)
-  3. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/111a4afe-d8ee-48bb-9e50-ac06b86d4268)
-  4. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c34ffc1f-96d9-4d86-907b-0c90b42a6e40)
+  1. 
+    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c0e42428-8f0b-408b-9eac-28b72e5852fd)
+  2. 
+    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c772ff80-24ee-4110-aec9-bd1edf1190de)
+  3. 
+    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/111a4afe-d8ee-48bb-9e50-ac06b86d4268)
+  4. 
+    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c34ffc1f-96d9-4d86-907b-0c90b42a6e40)
 
 
 
