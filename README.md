@@ -2,7 +2,7 @@
 
 ## About The Project
 
-![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/baf36f48-6f25-46e1-a7b6-eec6d13c2d5d)
+<img width="1117" alt="image" src="https://github.com/stanislaus18/weather-forecast/assets/17940960/a9a16b47-baaa-42b6-955c-7b36f5f66cef">
 
 # Built With
 1. <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
