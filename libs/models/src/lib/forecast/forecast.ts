@@ -1,13 +1,14 @@
-import { City } from './city';
-import { ForecastList } from './forecast-list';
 
-export interface Forecast {
-    cod: string
-    message: number
-    cnt: number
-    list: ForecastList[]
-    city: City
+export class Forecast {
+  temperature: number;
+  description: string;
+  time: string;
+
+  constructor(temperature: number, description: string, time: string) {
+    this.temperature = temperature;
+    this.description = description;
+    this.time = time;
   }
+}
 
-  
-  
+

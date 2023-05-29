@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 
-import { ForecastStateList } from '@weather-forecast/models';
+import { Forecast } from '@weather-forecast/models';
 import { ForecastFacadeService } from '@weather-forecast/store';
 
 @Component({
@@ -10,8 +10,8 @@ import { ForecastFacadeService } from '@weather-forecast/store';
   styleUrls: ['./forecast.component.scss'],
 })
 export class ForecastComponent implements OnInit {
-  forecastList$: Observable<any> | undefined;
-  todaysForecast$: Observable<ForecastStateList[]> | undefined;
+  forecastList$: Observable<Forecast[]> | undefined;
+  todaysForecast$: Observable<Forecast[]> | undefined;
 
   constructor(private forecastFacadeService: ForecastFacadeService) { }
 
