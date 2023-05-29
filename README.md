@@ -49,14 +49,10 @@ This is an example of how you may give instructions on setting up your project l
   
 
  # Entire application
-  1. 
-    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c0e42428-8f0b-408b-9eac-28b72e5852fd)
-  2. 
-    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c772ff80-24ee-4110-aec9-bd1edf1190de)
-  3. 
-    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/111a4afe-d8ee-48bb-9e50-ac06b86d4268)
-  4. 
-    ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c34ffc1f-96d9-4d86-907b-0c90b42a6e40)
+  1. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c0e42428-8f0b-408b-9eac-28b72e5852fd)
+  2. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c772ff80-24ee-4110-aec9-bd1edf1190de)
+  3. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/111a4afe-d8ee-48bb-9e50-ac06b86d4268)
+  4. ![image](https://github.com/stanislaus18/weather-forecast/assets/17940960/c34ffc1f-96d9-4d86-907b-0c90b42a6e40)
 
 
 
