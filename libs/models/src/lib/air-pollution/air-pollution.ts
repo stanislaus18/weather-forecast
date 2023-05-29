@@ -1,7 +1,9 @@
-import { Coord } from '../common';
-import { AirPollutionComponent } from './air-pollution-component';
+export class AirPollution {
+    description: string;
+    time: string;
 
-export interface AirPollution {
-    coord: Coord;
-    list: [{ components: AirPollutionComponent, main: { aqi: number } }]
+    constructor(description: string, time: string) {
+        this.description = description;
+        this.time = time;
+      }
 }

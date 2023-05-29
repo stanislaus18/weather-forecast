@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AirPollutionFacadeService } from '@weather-forecast/store';
 import { Observable } from 'rxjs';
+
+import { AirPollution } from '@weather-forecast/models';
+import { AirPollutionFacadeService } from '@weather-forecast/store';
 
 @Component({
   selector: 'air-pollution-component',
@@ -8,11 +10,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./air-pollution.component.scss'],
 })
 export class AirPollutionComponent implements OnInit {
-  airQuality$: Observable<string> | undefined;
+  currentAirQuality$: Observable<AirPollution> | undefined;
 
   constructor(private airPollutionFacadeService: AirPollutionFacadeService) {}
   
   ngOnInit(): void {
-      this.airQuality$ = this.airPollutionFacadeService.airQuality$;
+      this.currentAirQuality$ = this.airPollutionFacadeService.currentAirQuality$;
   }
 }

@@ -1,6 +1,7 @@
-import { AirPollutionComponent } from './air-pollution-component';
+import { AirPollution } from './air-pollution';
 
 export interface AirPollutionState {
-    airComponents: AirPollutionComponent | undefined;
-    airQuality: string | undefined;
+    // airComponents: AirPollutionComponent | undefined;
+    // airQuality: string | undefined;
+    currentAirQuality: AirPollution | undefined;
 }
