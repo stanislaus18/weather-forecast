@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, tap } from 'rxjs/operators';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
-import { WeatherState } from '@weather-forecast/models';
+import { WeatherState, WMO } from '@weather-forecast/models';
 import { WeatherApiService } from '@weather-forecast/apis';
 
 import { GetCurrentWeather } from './weather.actions';
@@ -11,8 +11,8 @@ import { GetCurrentWeather } from './weather.actions';
 @State<WeatherState>({
   name: 'Weather',
   defaults: {
-    currentTemperature: undefined,
-    weather: []
+    currentWeather: undefined,
+    description: undefined
   },
 })
 @Injectable()
@@ -21,12 +21,12 @@ export class WeatherStateService {
 
   @Selector()
   static currentTemperature(state: WeatherState) {
-    return state.currentTemperature;
+    return state.currentWeather?.temperature;
   }
 
   @Selector()
-  static weather(state: WeatherState) {
-    return state.weather;
+  static description(state: WeatherState) {
+    return state.description;
   }
 
   @Action(GetCurrentWeather)
@@ -35,9 +35,10 @@ export class WeatherStateService {
     return this.weatherApiService.getCurrentWeather(longitude, latitude)
       .pipe(
         tap(data => {
+          const weatherCode = data.current_weather.weathercode;
           context.patchState({
-            currentTemperature: Number(data.main.temp),
-            weather: data.weather
+            currentWeather: data.current_weather,
+            description: WMO[weatherCode]
           });
         }),
         catchError(error => {

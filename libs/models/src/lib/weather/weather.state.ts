@@ -1,7 +1,6 @@
-import { WeatherElement } from '../common';
-
+import { CurrentWeather } from './current-weather';
 export interface WeatherState {
-    currentTemperature: number | undefined;
-    weather: WeatherElement[];
+    currentWeather: CurrentWeather | undefined;
+    description: string | undefined;
     // other business variables
 }

@@ -18,25 +18,27 @@ export class WeatherComponent implements OnInit {
   weather: WeatherElement | undefined;
 
   currentPlace$: Observable<string> | undefined;
+  description$: Observable<string> | undefined;
   currentTemperature$: Observable<number> | undefined;
 
   ngOnInit(): void {
     this.currentTemperature$ = this.weatherFacadeService.currentTemperature$;
+    this.description$ = this.weatherFacadeService.description$;
     this.currentPlace$ = this.commonFacadeService.currentPlace$;
     
-    this.setWeatherDetails();
+    // this.setWeatherDetails();
   }
 
-  private setWeatherDetails() {
-    this.weatherFacadeService.weather$
-      .pipe(
-        untilDestroyed(this),
-        filter(weather => weather?.length > 0))
-      .subscribe(weather => {
-        this.imageUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`${this.baseUrl}${weather[0].icon}.png`);
-        this.weather = weather[0];
-      });
-  }
+  // private setWeatherDetails() {
+  //   this.weatherFacadeService.weather$
+  //     .pipe(
+  //       untilDestroyed(this),
+  //       filter(weather => weather?.length > 0))
+  //     .subscribe(weather => {
+  //       this.imageUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`${this.baseUrl}${weather[0].icon}.png`);
+  //       this.weather = weather[0];
+  //     });
+  // }
 
   constructor(
     private weatherFacadeService: WeatherFacadeService,

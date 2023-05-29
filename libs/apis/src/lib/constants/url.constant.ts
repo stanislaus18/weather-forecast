@@ -1,1 +1,1 @@
-export const URL = 'http://api.openweathermap.org/data/2.5/';
+export const URL = 'https://api.open-meteo.com/v1/';
