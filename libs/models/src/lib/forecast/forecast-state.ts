@@ -1,6 +1,7 @@
 import { Forecast } from './forecast';
+import { ComingDaysForecast } from './coming-days-forecast';
 
 export interface ForecastState {
-    forecastList: Forecast[];
+    comingDaysForecast: ComingDaysForecast[];
     todaysForecast: Forecast[];
 }

@@ -1,27 +1,27 @@
 import { EMPTY } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, switchMap, tap } from 'rxjs/operators';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
-import { GetForecast } from './forecast.actions';
-import { Forecast, ForecastState, WMO } from '@weather-forecast/models';
 import { ForecastApiService } from '@weather-forecast/apis';
-import { DomSanitizer } from '@angular/platform-browser';
+import { ComingDaysForecast, Forecast, ForecastState, WMO } from '@weather-forecast/models';
+
+import { GetForecast } from './forecast.actions';
 
 @State<ForecastState>({
   name: 'Forecast',
   defaults: {
-    forecastList: [],
+    comingDaysForecast: [],
     todaysForecast: []
   },
 })
 @Injectable()
 export class ForecastStateService {
-  constructor(private forecastApiService: ForecastApiService, private sanitizer: DomSanitizer) { }
+  constructor(private forecastApiService: ForecastApiService) { }
 
   @Selector()
-  static forecastList(state: ForecastState) {
-    return state.forecastList;
+  static comingDaysForecast(state: ForecastState) {
+    return state.comingDaysForecast;
   }
 
   @Selector()
@@ -31,7 +31,7 @@ export class ForecastStateService {
 
   @Action(GetForecast)
   getForecast(context: StateContext<ForecastState>, { longitude, latitude }: GetForecast) {
-    return this.forecastApiService.getForecast(longitude as string, latitude as string)
+    return this.forecastApiService.getHourlyForecast(longitude as string, latitude as string)
       .pipe(
         tap(data => {
           const weathercodeList = data.hourly.weathercode;
@@ -44,7 +44,6 @@ export class ForecastStateService {
             }
           });
 
-
           // get todays forecast 
           const todaysDate = (new Date).toISOString().split('T')[0];
           const todaysForeCastList = forecast.filter(fc => fc.time.includes(todaysDate));
@@ -56,24 +55,24 @@ export class ForecastStateService {
               tfc.temperature,
               tfc.description,
               time,
-              // image: this.sanitizer.bypassSecurityTrustResourceUrl(`${this.baseUrl}${tfc.weather[0].icon}.png`)
             )
           });
           context.patchState({ todaysForecast });
+        }),
+        // call the daily api to get the coming days forecast
+        switchMap(() => this.forecastApiService.getComingDaysForecast(longitude as string, latitude as string)),
+        tap( data => {
+          const temperatureMax = data.daily.temperature_2m_max;
+          const temperatureMin = data.daily.temperature_2m_min;
+          const comingDaysForecast = data.daily.time.map((date, index) => {
+            return new ComingDaysForecast(
+              temperatureMax[index],
+              temperatureMin[index],
+              date
+            )
+          })
 
-          // get other than todays forecast 
-          const list = forecast.filter(fc => !fc.time.includes(todaysDate));
-          const forecastList = list.map(tfc => {
-            const time = tfc.time.replace('T',' ');
-            // const time = date[1];
-            return new Forecast(
-              tfc.temperature,
-              tfc.description,
-              time,
-              // image: this.sanitizer.bypassSecurityTrustResourceUrl(`${this.baseUrl}${tfc.weather[0].icon}.png`)
-            ) 
-          });
-          context.patchState({ forecastList });
+          context.patchState({ comingDaysForecast });
 
         }),
         catchError(error => {

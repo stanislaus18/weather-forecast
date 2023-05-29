@@ -4,7 +4,7 @@ import { Select } from '@ngxs/store';
 import { Dispatch } from '@ngxs-labs/dispatch-decorator';
 import { Observable } from 'rxjs';
 
-import { Forecast } from '@weather-forecast/models';
+import { ComingDaysForecast, Forecast } from '@weather-forecast/models';
 
 import { ForecastStateService, GetForecast } from '../state';
 
@@ -13,8 +13,8 @@ import { ForecastStateService, GetForecast } from '../state';
 })
 export class ForecastFacadeService {
 
-  @Select(ForecastStateService.forecastList)
-  forecastList$!: Observable<Forecast[]>;
+  @Select(ForecastStateService.comingDaysForecast)
+  comingDaysForecast$!: Observable<ComingDaysForecast[]>;
 
   @Select(ForecastStateService.todaysForecast)
   todaysForecast$!: Observable<Forecast[]>;

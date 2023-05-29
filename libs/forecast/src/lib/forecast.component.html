@@ -1,35 +1,9 @@
 <div class="container text-center my-3">
     <h2 class="font-weight-light">Todays forecast</h2>
     
-    <div echarts [options]="chartOption" class="demo-chart" *ngIf=" todaysForecast$ | async"></div>
+    <div echarts [options]="chartOptionToday" class="demo-chart" *ngIf=" todaysForecast$ | async"></div>
 
     <h2 class="font-weight-light future-forecast">Coming days forecast</h2>
-    <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item {{ i === 0 ? 'active' : ''}}"
-                    *ngFor="let fc of forecastList$ | async; let i = index">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="https://via.placeholder.com/500x400/000?text={{ fc.description }}" class="img-fluid">
-                            </div>
-                            <div class="card-img-overlay"><span>{{ fc.temperature }}<sup>&#8451; 
-                               <!-- <img [src]="fc.image">-->
-                            </sup></span></div>
-                            <div class="card-footer">{{ fc.time}}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
-        </div>
-    </div>
+    
+    <div echarts [options]="chartOptionComingDays" class="demo-chart" *ngIf=" comingDaysForecast$ | async"></div>
 </div>
