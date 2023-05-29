@@ -1,26 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
+import { provideAutoSpy } from 'jest-auto-spies';
+import { CommonFacadeService, WeatherFacadeService } from '@weather-forecast/store';
+
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [],
-      declarations: [AppComponent],
+  let component: AppComponent;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        AppComponent,
+        provideAutoSpy(CommonFacadeService),
+        provideAutoSpy(WeatherFacadeService)
+      ]
     }).compileComponents();
+
+    component = TestBed.inject(AppComponent);
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome weather-ui'
-    );
-  });
-
-  it(`should have as title 'weather-ui'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('weather-ui');
+  it('should be defined', () => {
+    expect(component).toBeTruthy();
   });
 });

@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastComponent loadComingDaysVisualization with appropriate values 1`] = `
+{
+  "color": [
+    "#80FFA5",
+    "#00DDFF",
+  ],
+  "grid": {
+    "bottom": "3%",
+    "containLabel": true,
+    "left": "3%",
+    "right": "4%",
+  },
+  "series": [
+    {
+      "areaStyle": {
+        "color": LinearGradient {
+          "colorStops": [
+            {
+              "color": "rgb(255, 0, 135)",
+              "offset": 0,
+            },
+            {
+              "color": "rgb(135, 0, 157)",
+              "offset": 1,
+            },
+          ],
+          "global": false,
+          "type": "linear",
+          "x": 0,
+          "x2": 0,
+          "y": 0,
+          "y2": 1,
+        },
+        "opacity": 0.8,
+      },
+      "data": [
+        19.1,
+        17.9,
+      ],
+      "emphasis": {
+        "focus": "series",
+      },
+      "lineStyle": {
+        "width": 0,
+      },
+      "name": "Temperature Min",
+      "showSymbol": false,
+      "smooth": true,
+      "stack": "Total",
+      "type": "line",
+    },
+    {
+      "areaStyle": {
+        "color": LinearGradient {
+          "colorStops": [
+            {
+              "color": "rgb(255, 191, 0)",
+              "offset": 0,
+            },
+            {
+              "color": "rgb(224, 62, 76)",
+              "offset": 1,
+            },
+          ],
+          "global": false,
+          "type": "linear",
+          "x": 0,
+          "x2": 0,
+          "y": 0,
+          "y2": 1,
+        },
+        "opacity": 0.8,
+      },
+      "data": [
+        21.01,
+        19.01,
+      ],
+      "emphasis": {
+        "focus": "series",
+      },
+      "label": {
+        "position": "top",
+        "show": true,
+      },
+      "lineStyle": {
+        "width": 0,
+      },
+      "name": "Temperature Max",
+      "showSymbol": false,
+      "smooth": true,
+      "stack": "Total",
+      "type": "line",
+    },
+  ],
+  "title": {
+    "text": "Coming days forecast",
+  },
+  "tooltip": {
+    "axisPointer": {
+      "label": {
+        "backgroundColor": "#6a7985",
+      },
+      "type": "cross",
+    },
+    "trigger": "axis",
+  },
+  "xAxis": [
+    {
+      "boundaryGap": false,
+      "data": [
+        "2023-08-21",
+        "2023-08-21",
+      ],
+      "type": "category",
+    },
+  ],
+  "yAxis": [
+    {
+      "type": "value",
+    },
+  ],
+}
+`;
+
+exports[`ForecastComponent loadTodaysVisualization with appropriate values 1`] = `
+{
+  "grid": {
+    "bottom": "3%",
+    "containLabel": true,
+    "left": "3%",
+    "right": "4%",
+  },
+  "legend": {
+    "data": [
+      "Temperature",
+    ],
+  },
+  "series": [
+    {
+      "areaStyle": {
+        "color": LinearGradient {
+          "colorStops": [
+            {
+              "color": "rgb(224, 62, 76)",
+              "offset": 0,
+            },
+            {
+              "color": "rgb(255, 191, 0)",
+              "offset": 1,
+            },
+          ],
+          "global": false,
+          "type": "linear",
+          "x": 0,
+          "x2": 0,
+          "y": 0,
+          "y2": 1,
+        },
+        "opacity": 0.8,
+      },
+      "data": [
+        21.01,
+        19.01,
+      ],
+      "emphasis": {
+        "focus": "series",
+      },
+      "label": {
+        "position": "top",
+        "show": true,
+      },
+      "name": "Temperature",
+      "stack": "Total",
+      "type": "line",
+    },
+  ],
+  "title": {
+    "text": "Todays forecast",
+  },
+  "tooltip": {
+    "axisPointer": {
+      "label": {
+        "backgroundColor": "#6a7985",
+      },
+      "type": "cross",
+    },
+    "trigger": "axis",
+  },
+  "xAxis": [
+    {
+      "boundaryGap": false,
+      "data": [
+        "12:00",
+        "13:00",
+      ],
+      "type": "category",
+    },
+  ],
+  "yAxis": [
+    {
+      "splitLine": {
+        "show": false,
+      },
+      "type": "value",
+    },
+  ],
+}
+`;

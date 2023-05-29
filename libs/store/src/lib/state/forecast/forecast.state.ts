@@ -6,7 +6,7 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { ForecastApiService } from '@weather-forecast/apis';
 import { ComingDaysForecast, Forecast, ForecastState, WMO } from '@weather-forecast/models';
 
-import { GetForecast } from './forecast.actions';
+import { GetHourlyForecast } from './forecast.actions';
 
 @State<ForecastState>({
   name: 'Forecast',
@@ -29,8 +29,8 @@ export class ForecastStateService {
     return state.todaysForecast;
   }
 
-  @Action(GetForecast)
-  getForecast(context: StateContext<ForecastState>, { longitude, latitude }: GetForecast) {
+  @Action(GetHourlyForecast)
+  getHourlyForecast(context: StateContext<ForecastState>, { longitude, latitude }: GetHourlyForecast) {
     return this.forecastApiService.getHourlyForecast(longitude as string, latitude as string)
       .pipe(
         tap(data => {

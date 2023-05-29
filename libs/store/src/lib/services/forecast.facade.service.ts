@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 import { ComingDaysForecast, Forecast } from '@weather-forecast/models';
 
-import { ForecastStateService, GetForecast } from '../state';
+import { ForecastStateService, GetHourlyForecast } from '../state';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +19,5 @@ export class ForecastFacadeService {
   @Select(ForecastStateService.todaysForecast)
   todaysForecast$!: Observable<Forecast[]>;
 
-  @Dispatch() getForecast = (longitude: string, latitude: string) => new GetForecast(longitude, latitude);
+  @Dispatch() getForecast = (longitude: string, latitude: string) => new GetHourlyForecast(longitude, latitude);
 }

@@ -26,7 +26,7 @@ export class ForecastComponent implements OnInit {
     this.comingDaysForecast$ = this.forecastFacadeService.comingDaysForecast$.pipe(tap((data) => this.loadComingDaysVisualization(data)));
   }
 
-  loadTodaysVisualization(forecast: Forecast[]) {
+  private loadTodaysVisualization(forecast: Forecast[]) {
     this.chartOptionToday = {
       title: {
         text: 'Todays forecast'
@@ -95,7 +95,7 @@ export class ForecastComponent implements OnInit {
     };
   }
 
-  loadComingDaysVisualization(comingDaysForecast: ComingDaysForecast[]) {
+  private loadComingDaysVisualization(comingDaysForecast: ComingDaysForecast[]) {
     this.chartOptionComingDays =  {
       color: ['#80FFA5', '#00DDFF' ],
       title: {

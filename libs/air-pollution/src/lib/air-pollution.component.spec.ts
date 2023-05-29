@@ -1,4 +1,8 @@
+import { provideAutoSpy } from 'jest-auto-spies';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AirPollutionFacadeService } from '@weather-forecast/store';
+
 import { AirPollutionComponent } from './air-pollution.component';
 
 describe('AirPollutionComponent', () => {
@@ -7,7 +11,12 @@ describe('AirPollutionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AirPollutionComponent],
+      declarations: [
+        AirPollutionComponent
+      ],
+      providers: [
+        provideAutoSpy(AirPollutionFacadeService)
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AirPollutionComponent);
